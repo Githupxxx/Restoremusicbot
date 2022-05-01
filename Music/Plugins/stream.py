@@ -86,7 +86,7 @@ async def vplay(c: Client, message: Message):
     if a.status != "administrator":
         await message.reply_text(
             f"""
-💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
+💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin gblokk :
 
 » ❌ Hapus pesan
 » ❌ Blokir pengguna
@@ -101,7 +101,7 @@ async def vplay(c: Client, message: Message):
     if not a.can_manage_voice_chats:
         await message.reply_text(
             f"""
-💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
+💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin dasar bego:
 
 » ❌ Kelola obrolan suara
 
@@ -113,7 +113,7 @@ async def vplay(c: Client, message: Message):
     if not a.can_delete_messages:
         await message.reply_text(
             f"""
-💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
+💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izidasar pendooo :
 
 » ❌ Hapus pesan
 
@@ -125,7 +125,7 @@ async def vplay(c: Client, message: Message):
     if not a.can_invite_users:
         await message.reply_text(
             f"""
-💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
+💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin gblokn :
 
 » ❌ Tambah pengguna
 
@@ -161,7 +161,7 @@ async def vplay(c: Client, message: Message):
                 pass
             except Exception as e:
                 return await message.reply_text(
-                    f"❌ **@{ubot.username} Assistant gagal bergabung**\n\n**Alasan**: `{e}`"
+                    f"❌ **@{ubot.username} Assistant cantikk**\n\n**Alasan**: `{e}`"
                 )
 
     if replied:
