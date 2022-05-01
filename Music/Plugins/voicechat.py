@@ -105,7 +105,7 @@ async def activevc(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await message.reply_text("Tidak Ada Obrolan Suara Aktif")
+        await message.reply_text("DASAR GBLOK NYALAIN OS DULU")
     else:
         await message.reply_text(
             f"**Active Voice Chats:-**\n\n{text}",
@@ -143,7 +143,7 @@ async def baaaf(_, message):
         await message.reply_text(f"Gagal\n**Kemungkinan alasannya bisa**:{e}")
         print(e)
         return
-    await message.reply_text("Bot telah berhasil meninggalkan obrolan")
+    await message.reply_text("BOT TELAH KELUAR DARI OS KARNA BAU MMK")
 
 
 @app.on_message(filters.command("leaveassistant") & filters.user(SUDOERS))
