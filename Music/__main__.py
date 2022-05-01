@@ -22,8 +22,8 @@ Client(
 ).start()
 
 
-print(f"[INFO]: BOT STARTED AS {BOT_NAME}!")
-print(f"[INFO]: ASSISTANT STARTED AS {ASSNAME}!")
+print(f"[INFO]: BOT MULAI SANGE AS {BOT_NAME}!")
+print(f"[INFO]: ASSISTANT MULAI CROT AS {ASSNAME}!")
 
 
 
@@ -35,7 +35,7 @@ async def load_start():
             await app.edit_message_text(
                 restart_data["chat_id"],
                 restart_data["message_id"],
-                "**Restarted the Bot Successfully.**",
+                "**BERHASIL MERESTAT BOT GBLOK.**",
             )
         except Exception:
             pass
@@ -53,8 +53,8 @@ async def load_start():
             print("Error came while clearing db")
             pass     
     await startapp()
-    await app.send_message(LOG_GROUP_ID, "Bot Started")
-    await client.send_message(LOG_GROUP_ID, "Assistant Started")
+    await app.send_message(LOG_GROUP_ID, "Bot Mulai")
+    await client.send_message(LOG_GROUP_ID, "Assistant Mulai")
     print("[INFO]: STARTED")
     
    
