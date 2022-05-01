@@ -27,12 +27,12 @@ bcl = InlineKeyboardMarkup([[InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_da
 async def cbmenu(_, query: CallbackQuery):
     if query.message.sender_chat:
         return await query.answer(
-            "Anda adalah **Admin Anonim** !\n\n» kembali ke akun pengguna dari hak admin."
+            "Anda adalah **Admin Anonim** !\n\n» Gak usah sok jadi admin anonim gblok."
         )
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
         return await query.answer(
-            "💡 Hanya admin dengan izin mengelola obrolan suara yang dapat mengetuk tombol ini !",
+            "💡 Hanya admin dengan izin kelola obrolan yang bisa DASAR GBLOK !",
             show_alert=True,
         )
     await query.edit_message_text(
@@ -59,7 +59,7 @@ async def close(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
         return await query.answer(
-            "💡 Hanya admin dengan izin mengelola obrolan suara yang dapat mengetuk tombol ini !",
+            "💡 Hanya admin dengan izin kelola obrolan yang bisa DASAR GBLOK !",
             show_alert=True,
         )
     await query.message.delete()
@@ -81,14 +81,14 @@ async def skip(client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await m.reply("❌ Tidak ada yang sedang diputar")
+            await m.reply("❌ Tolol gak ada yang di putar bego")
         elif op == 1:
             await m.reply(
-                "✅ __Antrian__ **kosong.**\n\n**• Assistant meninggalkan obrolan suara**"
+                "✅ __Antrian__ **kosong.**\n\n**• Asiten miningalkan kamu karna jelek**"
             )
         elif op == 2:
             await m.reply(
-                "🗑️ **Membersihkan Antrian**\n\n**• Assistant meninggalkan obrolan suara**"
+                "🗑️ **Membersihkan Antrian**\n\n**• Asisten meninggalkan kamu karna jelek**"
             )
         else:
             await m.reply(
@@ -103,7 +103,7 @@ async def skip(client, m: Message):
             )
     else:
         skip = m.text.split(None, 1)[1]
-        OP = "🗑 **Lagu dihapus dari antrian:**"
+        OP = "🗑 **Lagu di hapus karna jelek:**"
         if chat_id in QUEUE:
             items = [int(x) for x in skip.split(" ") if x.isdigit()]
             items.sort(reverse=True)
@@ -127,11 +127,11 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ **Streaming telah berakhir.**")
+            await m.reply("✅ **Streaming bkep telah berakhir.**")
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **Tidak ada dalam streaming**")
+        await m.reply("❌ **Tidak ada video  dalam Streaming**")
 
 
 @app.on_message(command(["vpause"]) & filters.group)
@@ -142,12 +142,12 @@ async def pause(client, m: Message):
         try:
             await call_py.pause_stream(chat_id)
             await m.reply(
-                "II **Video dijeda.**\n\n• **Untuk melanjutkan video, gunakan Perintah** » /vresume"
+                "II **Video dijeda.**\n\n• **Untuk melanjutkan video, gunakan Perintah ini ya gblok** » /vresume"
             )
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **Tidak ada dalam streaming**")
+        await m.reply("❌ **Tidak ada video  dalam Streaming**")
 
 
 @app.on_message(command(["vresume"]) & filters.group)
@@ -158,12 +158,12 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                "▷ **Video dilanjutkan.**\n\n• **Untuk menjeda video, gunakan Perintah** » /vpause"
+                "▷ **Video dilanjutkan.**\n\n• **Untuk menjeda video, gunakan Perintah nah gitu dong gblok** » /vpause"
             )
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **Tidak ada dalam streaming**")
+        await m.reply("❌ **Gak ada apa apa kntl**")
 
 
 @app.on_message(command(["vmute"]) & filters.group)
@@ -174,12 +174,12 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **Assistant dibisukan.**\n\n• **Untuk mengaktifkan suara Assistant, gunakan Perintah**\n» /vunmute"
+                "🔇 **Assistant Di bisukan dasar gblok.**\n\n• **Untuk mengaktifkan suara Assistant, gunakan Perintah ini blok**\n» /vunmute"
             )
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **Tidak ada dalam streaming**")
+        await m.reply("❌ **Gak ada apa apa kntl**")
 
 
 @app.on_message(command(["vunmute"]) & filters.group)
@@ -190,24 +190,24 @@ async def unmute(client, m: Message):
         try:
             await call_py.unmute_stream(chat_id)
             await m.reply(
-                "🔊 **Assistant diaktifkan.**\n\n• **Untuk menonaktifkan bot pengguna, gunakan Perintah**\n» /vmute"
+                "🔊 **Assistant diaktifkan.**\n\n• **Untuk menonaktifkan bot pengguna, gunakan Perintayang makek ini gblokh **\n» /vmute"
             )
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **Tidak ada dalam streaming**")
+        await m.reply("❌ **Gak ada apa apa kntl**")
 
 
 @Client.on_callback_query(filters.regex("cbpause"))
 async def cbpause(_, query: CallbackQuery):
     if query.message.sender_chat:
         return await query.answer(
-            "Anda adalah **Admin Anonim** !\n\n» kembali ke akun pengguna dari hak admin."
+            "Anda adalah **Admin Anonim** !\n\n» kembali ke akun pengguna dari hak admin gak usah sok anonim knt0l ."
         )
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
         return await query.answer(
-            "💡 Hanya admin dengan izin mengelola obrolan suara yang dapat mengetuk tombol ini!",
+            "💡 Hanya admin dengan izin mengelola obrolan suara yang dapat mengetuk tombol ini gblokk!",
             show_alert=True,
         )
     chat_id = query.message.chat.id
@@ -218,14 +218,14 @@ async def cbpause(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"**Error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ Tidak ada yang sedang streaming", show_alert=True)
+        await query.answer("❌ Gak ada apa apa kntl", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbresume"))
 async def cbresume(_, query: CallbackQuery):
     if query.message.sender_chat:
         return await query.answer(
-            "Anda adalah **Admin Anonim** !\n\n» kembali ke akun pengguna dari hak admin."
+            "Anda adalah **Admin Anonim** !\n\n» kembali ke akun pengguna dari hak admin gak usah sok anonim knt0l."
         )
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
