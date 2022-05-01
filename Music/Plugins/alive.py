@@ -63,10 +63,10 @@ async def alive(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "sᴜᴘᴘᴏʀᴛ", url=f"t.me/{GROUP}"
+                        "sᴜᴘᴘᴏʀᴛ", url=f"t.me/CIRCLEPOKE"
                     ),
                     InlineKeyboardButton(
-                        "ᴜᴘᴅᴀᴛᴇs", url=f"t.me/{CHANNEL}"
+                        "ᴜᴘᴅᴀᴛᴇs", url=f"t.me/KontolLodanYa"
                     )
                 ]
             ]
