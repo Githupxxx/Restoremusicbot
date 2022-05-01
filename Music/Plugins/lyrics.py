@@ -28,7 +28,7 @@ async def lyricssex(_,CallbackQuery):
         for result in results.result()["result"]:
             title = (result["title"])
     except Exception as e:
-        return await CallbackQuery.answer("❌ Suara tidak ditemukan, masalah Youtube...", show_alert=True)   
+        return await CallbackQuery.answer("❌ Suara tidak ditemukan nyari yang bener gblok , masalah Youtube...", show_alert=True)   
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
     print(title)
@@ -37,7 +37,7 @@ async def lyricssex(_,CallbackQuery):
     y.verbose = False
     S = y.search_song(t, get_full_info=False)
     if S is None:
-        return await CallbackQuery.answer("❌ Lirik tidak ditemukan :p", show_alert=True)
+        return await CallbackQuery.answer("❌ Lirik tidak ditemukan nyari yang bener gblok :p", show_alert=True)
     await CallbackQuery.message.delete()
     userid = CallbackQuery.from_user.id
     usr = f"[{CallbackQuery.from_user.first_name}](tg://user?id={userid})"
@@ -65,7 +65,7 @@ async def lrsearch(_, message: Message):
     y.verbose = False
     S = y.search_song(query, get_full_info=False)
     if S is None:
-        return await m.edit("❌ Lirik tidak ditemukan :p")
+        return await m.edit("❌ Lirik tidak ditemukan nyari yang bener gblok :p")
     xxx = f"""
 **Lyrics Search Powered By {BOT_NAME} Player**
 
