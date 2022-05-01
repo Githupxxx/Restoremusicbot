@@ -15,7 +15,7 @@ async def bye(client, message):
     if message.from_user.id in SUDOERS:
         left = 0
         failed = 0
-        lol = await message.reply("Asisten Meninggalkan semua obrolan")
+        lol = await message.reply("Asisten Meninggalkan semua cowok/cewek")
         async for dialog in USER.iter_dialogs():
             try:
                 await USER.leave_chat(dialog.chat.id)
